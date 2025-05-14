@@ -1,0 +1,65 @@
+/* DarkMode.css - Add this to your global CSS */
+:root {
+    --background-light: #ffffff;
+    --text-light: #1f2937;
+    --primary-light: #3b82f6;
+    --secondary-light: #6b7280;
+    --accent-light: #ef4444;
+    --border-light: #e5e7eb;
+    
+    --background-dark: #1f2937;
+    --text-dark: #f9fafb;
+    --primary-dark: #3b82f6;
+    --secondary-dark: #9ca3af;
+    --accent-dark: #f87171;
+    --border-dark: #374151;
+  }
+  
+  body {
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Smooth transitions when switching themes */
+  * {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+  
+  /* Make sure ToastContainer follows dark mode */
+  .Toastify__toast {
+    @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100;
+  }
+  
+  /* Customize scrollbar for dark mode */
+  .dark ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .dark ::-webkit-scrollbar-thumb {
+    @apply bg-gray-700 rounded;
+  }
+  
+  .dark ::-webkit-scrollbar-track {
+    @apply bg-gray-900;
+  }
+  
+  /* Provide dark mode variants for common elements */
+  input, textarea, select {
+    @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border-gray-300 dark:border-gray-700;
+  }
+  
+  button {
+    @apply transition-colors duration-200;
+  }
+  
+  table {
+    @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100;
+  }
+  
+  /* Card-like elements */
+  .card, .ticket, .box {
+    @apply bg-white dark:bg-gray-800 shadow dark:shadow-gray-800;
+  }
